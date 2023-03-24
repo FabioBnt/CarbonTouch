@@ -11,10 +11,12 @@
         android:id="@+id/imageView
         android:src="@drawable/logo" />
         -->
+    <!-- title -->
+    
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_marginTop="-20dp"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
