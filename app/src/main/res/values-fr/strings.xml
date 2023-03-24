@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name" translatable="false">CarbonTouch</string>
+    <string name="language">Langue</string>
+    <string name="buttonTest">Commencer le test</string>
+    <string name="buttonLogin">Connexion</string>
+    <string name="language_switcher_button">Changer la langue</string>
+    <string name="application_s_logo">Logo de l\'application</string>
+    <string name="options">Options</string>
+    <string name="hello">Bienvenue sur CarbonTouch ! Nous sommes ravis que vous nous rejoigniez sur le chemin d\'un avenir plus durable. </string>
+    <string name="app_home_title">Calculateur d\'empreinte carbone</string>
+    <string name="Profile">Profil</string>
+</resources>

@@ -8,9 +8,10 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/options_menu"
+        android:id="@+id/profile_menu"
         android:icon="@android:drawable/ic_menu_sort_by_size"
-        android:title="@string/options"
-        app:showAsAction="ifRoom" />
+        android:title="@string/Profile"
+        />
+
 
 </menu>
