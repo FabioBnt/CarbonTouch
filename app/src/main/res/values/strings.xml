@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">CarbonTouch</string>
     <string name="language">Language</string>
+    <string name="buttonTest">Take Test</string>
+    <string name="buttonLogin">Login</string>
+    <string name="hello">Welcome to our carbon footprint calculator app! We are thrilled to have you join us on the journey towards a more sustainable future. Our app is designed to help you understand the impact of your daily choices on the environment and calculate your carbon footprint.</string>
 </resources>
