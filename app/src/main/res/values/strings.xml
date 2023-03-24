@@ -7,4 +7,6 @@
     <string name="language_switcher_button">Language switcher button</string>
     <string name="application_s_logo">Application\'s logo</string>
     <string name="options">Options</string>
+    <string name="hello">Welcome to CarbonTouch app! We are thrilled to have you join us on the journey towards a more sustainable future. </string>
+    <string name="app_home_title">Carbon Footprint Calculator</string>
 </resources>
