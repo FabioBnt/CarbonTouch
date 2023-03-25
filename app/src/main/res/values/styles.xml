@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RadioButtonStyle">
+        <item name="android:button">@null</item>
+        <item name="android:buttonTint">@color/radio_button_color</item>
+        <item name="android:textColor">@color/radio_button_text_color</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+</resources>

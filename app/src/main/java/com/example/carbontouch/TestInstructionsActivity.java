@@ -80,10 +80,9 @@ public class TestInstructionsActivity extends AppCompatActivity {
                         // go to the next card
                         viewPager.setCurrentItem(mCurrentCardIndex);
                     }else if (mCurrentCardIndex == NUM_CARDS - 1){
-                        // TODO: handle start button click
                         // open the activity "TestActivity" and close this activity
-                        //Intent intent = new Intent(this, TestActivity.class);
-                        //startActivity(intent);
+                        Intent intent = new Intent(TestInstructionsActivity.this, TestActivity.class);
+                        startActivity(intent);
                         finish();
                     } else {
                         // go to the last card

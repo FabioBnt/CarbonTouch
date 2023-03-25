@@ -13,7 +13,10 @@
     <color name="description_text">#666666</color>
     <color name="button_background">#FF6200EE</color>
     <color name="button_text">#FFFFFFFF</color>
-
+    <color name="radio_button_color">#FF6200EE</color>
+    <color name="radio_button_text_color">#FF6200EE</color>
+    <!-- gray outline color -->
+    <color name="outline_color">#FFCCCCCC</color>
 
 
 </resources>

@@ -15,7 +15,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // TODO: add the code to handle the click on the button +id/button2
+        // open the activity "LoginActivity" when the user click on the button "Login"
+        Button buttonLogin = (Button) findViewById(R.id.button);
+        buttonLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        });
         // the button should open the activity "TestActivityInstructions"
         Button buttonTestStart = (Button) findViewById(R.id.button2);
         buttonTestStart.setOnClickListener(v -> {
