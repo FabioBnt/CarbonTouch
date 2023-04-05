@@ -17,6 +17,10 @@
     <color name="radio_button_text_color">#FF6200EE</color>
     <!-- gray outline color -->
     <color name="outline_color">#FFCCCCCC</color>
+    <!-- score colors green, yellow, red -->
+    <color name="score_green">#FF00FF00</color>
+    <color name="score_yellow">#FFFFFF00</color>
+    <color name="score_red">#FFFF0000</color>
 
 
 </resources>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,15 +27,25 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Check if user is connected or not
-                boolean isConnected = checkConnectionStatus();
-
-                if (isConnected) {
-                    // TODO: return to previous page with the value of the user
+                // get username and password from text fields
+                String username = ((TextView) findViewById(R.id.username_edit_text)).getText().toString();
+                String password = ((TextView) findViewById(R.id.password_edit_text)).getText().toString();
+                if (username.isEmpty() || password.isEmpty()) {
+                    // toast error message
+                    Toast.makeText(LoginActivity.this, "Please enter a username and password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // login user
+                carbonDBHelper db = new carbonDBHelper(LoginActivity.this);
+                if (db.checkUser(username, password)) {
+                    // return result to previous activity
+                    Intent intent = new Intent();
+                    intent.putExtra("username", username);
+                    setResult(RESULT_OK, intent);
                     finish();
                 } else {
-                    // If user is not connected, display error message
-                    showError();
+                    // toast error message
+                    Toast.makeText(LoginActivity.this, "Username or password is incorrect", Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -11,6 +11,23 @@ import android.widget.Button;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int LOGIN_REQUEST_CODE = 1;
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == LOGIN_REQUEST_CODE && resultCode == RESULT_OK) {
+            String username = data.getStringExtra("username");
+            // Handle the login result here
+            // change button login to profile
+            Button loginButton = (Button) findViewById(R.id.button);
+            loginButton.setText("Profile");
+            // add a listener to the button "Profile" to open the activity "ProfileActivity"
+            loginButton.setOnClickListener(v -> {
+                Intent intent = new Intent(this, ProfileActivity.class);
+                startActivity(intent);
+            });
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +36,12 @@ public class MainActivity extends AppCompatActivity {
         Button buttonLogin = (Button) findViewById(R.id.button);
         buttonLogin.setOnClickListener(v -> {
             Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+            try {
+                // start activity for result
+                startActivityForResult(intent, LOGIN_REQUEST_CODE);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         });
         // the button should open the activity "TestActivityInstructions"
         Button buttonTestStart = (Button) findViewById(R.id.button2);

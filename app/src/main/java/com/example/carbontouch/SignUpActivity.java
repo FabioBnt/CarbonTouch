@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,18 +27,26 @@ public class SignUpActivity extends AppCompatActivity {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO : sign up user
-
-                //boolean isConnected = checkConnectionStatus();
-                /* if (isConnected) {
-                        // TODO: return to previous page with the value of the user
-                        Toast.makeText(SignUpActivity.this, "Sign up successful", Toast.LENGTH_SHORT).show();
-                        finish();
-                 */
-                //} else {
-                // If user is not connected, display error message
-                //showError();
-                //}
+                // get username and password from text fields
+                String username = ((TextView) findViewById(R.id.username_edit_text)).getText().toString();
+                String password = ((TextView) findViewById(R.id.password_edit_text)).getText().toString();
+                if (username.isEmpty() || password.isEmpty()) {
+                    // toast error message
+                    Toast.makeText(SignUpActivity.this, "Please enter a username and password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                // sign up user
+                carbonDBHelper db = new carbonDBHelper(SignUpActivity.this);
+                if (db.addUser( username, password)) {
+                    // return result to previous activity
+                    Intent intent = new Intent();
+                    intent.putExtra("username", username);
+                    setResult(RESULT_OK, intent);
+                    finish();
+                } else {
+                    // toast error message
+                    Toast.makeText(SignUpActivity.this, "Username already exists", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
