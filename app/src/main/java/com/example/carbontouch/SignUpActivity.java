@@ -30,9 +30,15 @@ public class SignUpActivity extends AppCompatActivity {
                 // get username and password from text fields
                 String username = ((TextView) findViewById(R.id.username_edit_text)).getText().toString();
                 String password = ((TextView) findViewById(R.id.password_edit_text)).getText().toString();
+                String confirmPassword = ((TextView) findViewById(R.id.validate_password_edit_text)).getText().toString();
                 if (username.isEmpty() || password.isEmpty()) {
                     // toast error message
                     Toast.makeText(SignUpActivity.this, "Please enter a username and password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if (!password.equals(confirmPassword)) {
+                    // toast error message
+                    Toast.makeText(SignUpActivity.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 // sign up user

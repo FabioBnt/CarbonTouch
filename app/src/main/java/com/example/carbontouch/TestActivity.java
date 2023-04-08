@@ -2,6 +2,7 @@ package com.example.carbontouch;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -74,22 +75,22 @@ public class TestActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
                     buttonNext.setText("Finish");
                 }else {
-                    //Todo: calculate the results
-                    // return the results
-                    //1 - calculate the results
-                    int result = 0;
-                    for (int i = 0; i < NUM_PAGES; i++) {
-                        int selectedAnswer = adapter.getAnswer(i);
-                        if (selectedAnswer == -1) {
-                            Toast.makeText(TestActivity.this, "Please answer all questions before submitting", Toast.LENGTH_SHORT).show();
-                            return;
-                        }
-                        result += selectedAnswer;
+                    // calculate the carbon intensity
+                    int result = adapter.getCarbonIntensity();
+                    // if username is set register the score
+                    if (getIntent().getStringExtra("username") != null) {
+                        String username = getIntent().getStringExtra("username");
+                        int score = result;
+                        carbonDBHelper dbHelper = new carbonDBHelper(TestActivity.this);
+                        // todays date
+                        String date = new SimpleDateFormat("dd-MM-yyyy").format(new java.util.Date());
+                        dbHelper.addScore(result, date, username);
                     }
-                    //2 - return the results
-                    Intent intent = new Intent();
+                    // open the results activity
+                    Intent intent = new Intent(TestActivity.this, ResultsActivity.class);
                     intent.putExtra("result", result);
-                    setResult(RESULT_OK, intent);
+                    Toast.makeText(TestActivity.this, "Your carbon intensity is " + result, Toast.LENGTH_SHORT).show();
+                    startActivity(intent);
                     finish();
                 }
             }
@@ -125,6 +126,14 @@ public class TestActivity extends AppCompatActivity {
                 return fragment.getAnswer();
             }
             return -1;
+        }
+
+        public int getCarbonIntensity() {
+            int result = 0;
+            for (CardFragment fragment : fragments) {
+                result += fragment.getCarbonIntensity();
+            }
+            return result;
         }
     }
 

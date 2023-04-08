@@ -18,7 +18,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -36,16 +35,25 @@ public class ProfileActivity extends AppCompatActivity {
         scoreListView = findViewById(R.id.score_list_view);
         scores = new ArrayList<>();
 
+        // get parameters from intent
+        String username = getIntent().getStringExtra("username");
+
         // Retrieve scores from SQLite database
         dbHelper = new carbonDBHelper(this);
-        List<Score> scores = readScoresFromDB();
+        List<Score> scores = readScoresFromDB(username);
 
         // Set up adapter for list view
         ScoreAdapter adapter = new ScoreAdapter(this, R.layout.list_item_layout, scores);
+        if (scores.size() == 0) {
+            // update adapter to show a message if there are no scores
+            Score noScores = new Score(0, 0, "No scores yet");
+            scores.add(noScores);
+            adapter = new ScoreAdapter(this, R.layout.list_item_layout, scores);
+        }
         scoreListView.setAdapter(adapter);
     }
 
-    private List<Score> readScoresFromDB() {
+    private List<Score> readScoresFromDB(String username) {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         String[] projection = {
                 carbonDBHelper.score_table._ID,
@@ -55,11 +63,8 @@ public class ProfileActivity extends AppCompatActivity {
         Cursor cursor = db.query(
                 carbonDBHelper.score_table.TABLE_NAME.toString(),
                 projection,
-                null,
-                null,
-                null,
-                null,
-                null
+                carbonDBHelper.score_table.COLUMN_USERNAME.toString() + " = ?",
+                new String[]{username}, null, null, null
         );
 
         List<Score> scores = new ArrayList<>();
@@ -92,19 +97,22 @@ public class ProfileActivity extends AppCompatActivity {
 
             // Set date
             TextView dateTextView = convertView.findViewById(R.id.dateTextView);
-            SimpleDateFormat format = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault());
-            String dateString = format.format(score.getDate());
+            if(score.getId() == 0) {
+                dateTextView.setText(score.getDate());
+                return convertView;
+            }
+            String dateString = score.getDate();
             dateTextView.setText(dateString);
 
             // Set color based on score
             View colorView = convertView.findViewById(R.id.colorView);
             int scoreColor;
-            if (score.getScore() >= 80) {
-                scoreColor = ContextCompat.getColor(getContext(), R.color.score_green);
-            } else if (score.getScore() >= 60) {
+            if (score.getScore() >= 60) {
+                scoreColor = ContextCompat.getColor(getContext(), R.color.score_red);
+            } else if (score.getScore() >= 35) {
                 scoreColor = ContextCompat.getColor(getContext(), R.color.score_yellow);
             } else {
-                scoreColor = ContextCompat.getColor(getContext(), R.color.score_red);
+                scoreColor = ContextCompat.getColor(getContext(), R.color.score_green);
             }
             colorView.setBackgroundColor(scoreColor);
 

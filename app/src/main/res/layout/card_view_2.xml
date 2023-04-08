@@ -16,15 +16,25 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Card View 1 Title"
+            android:text="@string/login_title"
             android:textColor="@color/title_text"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:text="@string/login_description"
             android:textColor="@color/description_text"
+            android:textSize="16sp" />
+        <!-- login button -->
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/button_background"
+            android:text="@string/login"
+            android:textColor="@color/white"
             android:textSize="16sp" />
 
     </LinearLayout>

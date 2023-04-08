@@ -15,4 +15,15 @@
     <string name="sign_up">Sign Up</string>
     <string name="validate_password">Confirm Password</string>
     <string name="login">Login</string>
+    <string name="login_title">Login</string>
+    <string name="login_description">Log in to your CarbonTouch account to access your results and your history if you have already performed one.</string>
+    <string name="score">Carbon footprint score</string>
+    <string name="comparison">Comparison</string>
+    <string name="average">Average</string>
+    <string name="result_title">Result</string>
+    <string name="comparison_title">Comparison</string>
+    <string name="score_textview">Your carbon footprint score is %1$s kgCO2e/year</string>
+    <string name="average_textview">The average of users is %1$s kgCO2e/year</string>
+    <string name="description_higher">You are %1$s%% more CO2e emitter than the average of users</string>
+    <string name="description_lower">You are %1$s%% less CO2e emitter than the average of users</string>
 </resources>

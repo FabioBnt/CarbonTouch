@@ -60,4 +60,18 @@ public abstract class CardFragment extends Fragment {
     public abstract String getAnswer3();
     public abstract String getAnswer4();
 
+    public double getCarbonIntensity() {
+        // calculate the carbon intensity
+        if (getAnswer() == R.id.answer1RadioButton) {
+            return 1.0;
+        } else if (getAnswer() == R.id.answer2RadioButton) {
+            return 5.0;
+        } else if (getAnswer() == R.id.answer3RadioButton) {
+            return 10.0;
+        } else if (getAnswer() == R.id.answer4RadioButton) {
+            return 25.0;
+        } else {
+            return 0.0;
+        }
+    }
 }

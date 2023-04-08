@@ -21,6 +21,9 @@
     <color name="score_green">#FF00FF00</color>
     <color name="score_yellow">#FFFFFF00</color>
     <color name="score_red">#FFFF0000</color>
+    <!-- grey color -->
+    <color name="grey">#FFCCCCCC</color>
+    <color name="green">#FF00FF00</color>
 
 
 </resources>

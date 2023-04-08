@@ -34,12 +34,13 @@ public class CardFragment1 extends CardFragment {
 
     @Override
     public String getAnswer3() {
-        return "Gas car";
+        return "Electric car";
     }
 
     @Override
     public String getAnswer4() {
-        return "electric car";
+        return "Gas car";
     }
+
 }
 

@@ -52,6 +52,21 @@ public class TestInstructionsActivity extends AppCompatActivity {
                 } else {
                     startButton.setText("Next");
                 }
+                // if second card search for button and check if username is not null
+                if (position == 1) {
+                    Button button = findViewById(R.id.login_button);
+                    // if username exists then hide the button
+                    if (getIntent().getStringExtra("username") != null) {
+                        button.setVisibility(View.GONE);
+                    }else
+                        button.setVisibility(View.VISIBLE);
+                        button.setText("return to login");
+                        // event listener for the button
+                        button.setOnClickListener(v -> {
+                            // close this activity
+                            finish();
+                        });
+                }
             }
 
             @Override
@@ -82,6 +97,10 @@ public class TestInstructionsActivity extends AppCompatActivity {
                     }else if (mCurrentCardIndex == NUM_CARDS - 1){
                         // open the activity "TestActivity" and close this activity
                         Intent intent = new Intent(TestInstructionsActivity.this, TestActivity.class);
+                        // if username exists then pass it to the next activity
+                        if (getIntent().getStringExtra("username") != null) {
+                            intent.putExtra("username", getIntent().getStringExtra("username"));
+                        }
                         startActivity(intent);
                         finish();
                     } else {

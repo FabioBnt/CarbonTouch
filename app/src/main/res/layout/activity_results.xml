@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_title"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/score_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_title"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/average_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_textview"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/grey"
+        android:layout_below="@id/average_textview"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/comparison_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comparison_title"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/divider"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/score_imageview"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_below="@id/comparison_title"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_check"
+        android:layout_marginEnd="16dp"
+        android:layout_centerHorizontal="true"
+        android:tint="@color/green"/>
+
+    <TextView
+        android:id="@+id/description_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_imageview"
+        android:layout_marginTop="16dp"
+        android:textSize="23sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black" />
+
+
+
+</RelativeLayout>
