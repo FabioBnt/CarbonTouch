@@ -89,7 +89,6 @@ public class TestActivity extends AppCompatActivity {
                     // open the results activity
                     Intent intent = new Intent(TestActivity.this, ResultsActivity.class);
                     intent.putExtra("result", result);
-                    Toast.makeText(TestActivity.this, "Your carbon intensity is " + result, Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                     finish();
                 }

@@ -1,5 +1,6 @@
 package com.example.carbontouch;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,6 +44,7 @@ public class TestInstructionsActivity extends AppCompatActivity {
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             }
 
+            @SuppressLint("SuspiciousIndentation")
             @Override
             public void onPageSelected(int position) {
                 mCurrentCardIndex = position;

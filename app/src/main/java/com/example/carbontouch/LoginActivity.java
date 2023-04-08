@@ -68,16 +68,5 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private boolean checkConnectionStatus() {
-        // Check connection status of user
-        // TODO: Implement connection status check
-
-        return true;
-    }
-
-    private void showError() {
-        // Display error message to user
-        // TODO: Implement error message
-    }
 }
 
