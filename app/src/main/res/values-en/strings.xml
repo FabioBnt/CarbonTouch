@@ -2,13 +2,12 @@
 <resources>
     <string name="buttonTest">Start Test</string>
     <string name="buttonLogin">Login</string>
-    <string name="language_switcher_button">Change Language</string>
     <string name="application_s_logo">Application\'s logo</string>
     <string name="options">Options</string>
     <string name="hello">Welcome to CarbonTouch! We\'re excited to have you join us on the path to a more sustainable future.</string>
     <string name="app_home_title">Carbon Footprint Calculator</string>
     <string name="Profile">Profile</string>
-    <string name="language">Language</string>
+    <string name="exit">Exit</string>
     <string name="username">User name</string>
     <string name="password">Password</string>
     <string name="cancel">Cancel</string>
@@ -26,4 +25,5 @@
     <string name="average_textview">The average of users is %1$s kgCO2e/year</string>
     <string name="description_higher">You are %1$s%% more CO2e emitter than the average of users</string>
     <string name="description_lower">You are %1$s%% less CO2e emitter than the average of users</string>
+    <string name="logout">Logout</string>
 </resources>

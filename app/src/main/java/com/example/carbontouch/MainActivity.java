@@ -7,8 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
-
-import java.util.Locale;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private static final int LOGIN_REQUEST_CODE = 1;
@@ -74,11 +73,41 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.language) {
-            // TODO: change the language of the app
-            return true;
+        if (id == R.id.exit) {
+            // Exit the application
+            finish();
         } else if (id == R.id.profile_menu) {
-            return true;
+            // if we are logged in, open the activity "ProfileActivity"
+            if (username != null) {
+                Intent intent = new Intent(this, ProfileActivity.class);
+                intent.putExtra("username", username);
+                startActivity(intent);
+            }else{
+                // Toast message to tell the user to login
+                Toast.makeText(this, "Please login first", Toast.LENGTH_SHORT).show();
+            }
+        } else if (id == R.id.logout) {
+            // if we are logged in, logout
+            if(username != null){
+                username = null;
+                // change the button "Profile" to "Login"
+                loginButton = (Button) findViewById(R.id.button);
+                loginButton.setText("Login");
+                loginButton.setOnClickListener(v -> {
+                    Intent intent = new Intent(this, LoginActivity.class);
+                    try {
+                        // start activity for result
+                        startActivityForResult(intent, LOGIN_REQUEST_CODE);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                });
+                // Toast message to tell the user that he is logged out
+                Toast.makeText(this, "You are logged out", Toast.LENGTH_SHORT).show();
+            }else{
+                // Toast message to tell the user that he is not logged in
+                Toast.makeText(this, "You are not logged in", Toast.LENGTH_SHORT).show();
+            }
         }
         return super.onOptionsItemSelected(item);
     }

@@ -2,10 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/language"
-        android:title="@string/language"
-        android:icon="@drawable/language"
-        app:showAsAction="always"/>
+        android:id="@+id/exit"
+        android:title="@string/exit"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"
+        app:showAsAction="always" />
 
     <item
         android:id="@+id/profile_menu"
