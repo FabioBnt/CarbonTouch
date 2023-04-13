@@ -10,7 +10,7 @@
         android:id="@+id/scores_history_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Scores History"
+        android:text="@string/scores_history"
         android:textSize="24sp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"

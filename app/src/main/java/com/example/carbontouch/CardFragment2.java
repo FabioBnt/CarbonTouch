@@ -43,4 +43,9 @@ public class CardFragment2 extends CardFragment {
     public String getAnswer4() {
         return "4 or more";
     }
+
+    @Override
+    public int getImageView() {
+        return R.drawable.household;
+    }
 }

@@ -13,25 +13,44 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/HeaderTestName"
+            android:textColor="@color/title_text"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/TextGlobalWarming"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:typeface="sans" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"/>
+            android:layout_margin="10dp"
+            android:contentDescription="@string/ImageGWDesc"
+            android:scaleType="fitCenter"
+            android:src="@drawable/earthwarming" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Card View 1 Title"
-            android:textColor="@color/title_text"
-            android:textSize="20sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:layout_marginTop="5dp"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/TextPurposeTest"
+            android:textAlignment="textStart"
             android:textColor="@color/description_text"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
     </LinearLayout>
 

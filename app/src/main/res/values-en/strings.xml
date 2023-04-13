@@ -26,4 +26,15 @@
     <string name="description_higher">You are %1$s%% more CO2e emitter than the average of users</string>
     <string name="description_lower">You are %1$s%% less CO2e emitter than the average of users</string>
     <string name="logout">Logout</string>
+    <string name="ImageGWDesc">An Image of the Earth with a thermometer aside from it, representing global warming</string>
+    <string name="HeaderTestName">My Carbon Footprint</string>
+    <string name="TextGlobalWarming">Our Planet is warming up, due to the emission of greenhouse gases by man. This phenomenon started more than 100 years ago and is accelerating. Scientists are unanimous: we must act now to limit global warming and its consequences.</string>
+    <string name="TextPurposeTest">This test gives you a quick measure of your carbon footprint. It allows you to know your impact on the climate and to compare yourself to the average French person.</string>
+    <string name="HeaderStartTest">Are you ready ?</string>
+    <string name="TextStartTest">This is an individual test.   Answer for yourself and your personal life, not for your work or studies.   However, remember to count your commute to work.</string>
+    <string name="scores_history">Scores History</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="start">Start</string>
 </resources>

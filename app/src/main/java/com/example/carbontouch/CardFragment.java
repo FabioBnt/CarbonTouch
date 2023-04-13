@@ -1,6 +1,7 @@
 package com.example.carbontouch;
 
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +40,7 @@ public abstract class CardFragment extends Fragment {
         radioButton3 = view.findViewById(R.id.answer3RadioButton);
         radioButton4 = view.findViewById(R.id.answer4RadioButton);
 
-        imageView.setImageResource(R.drawable.ic_launcher_background);
+        imageView.setImageResource(getImageView());
         // Set the question text
         questionTextView.setText(getQuestion());
         // Set the radio button options
@@ -55,10 +56,12 @@ public abstract class CardFragment extends Fragment {
     }
 
     public abstract String getQuestion();
+
     public abstract String getAnswer1();
     public abstract String getAnswer2();
     public abstract String getAnswer3();
     public abstract String getAnswer4();
+    public abstract int getImageView();
 
     public double getCarbonIntensity() {
         // calculate the carbon intensity

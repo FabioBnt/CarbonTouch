@@ -16,14 +16,18 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Card View 1 Title"
+            android:text="@string/HeaderStartTest"
+            android:textAlignment="center"
             android:textColor="@color/title_text"
             android:textSize="20sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/TextStartTest"
+            android:textAlignment="center"
             android:textColor="@color/description_text"
             android:textSize="16sp" />
 

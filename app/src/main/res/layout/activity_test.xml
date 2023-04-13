@@ -31,7 +31,7 @@
             android:id="@+id/button_prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prev"
+            android:text="@string/previous"
             android:enabled="false"
             android:onClick="onPrevClick"/>
 
@@ -44,7 +44,7 @@
             android:id="@+id/button_next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Next"
+            android:text="@string/next"
             android:onClick="onNextClick"/>
 
     </LinearLayout>

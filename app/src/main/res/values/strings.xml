@@ -26,4 +26,15 @@
     <string name="description_higher">Vous êtes %1$s%% plus émetteur de CO2e que la moyenne des utilisateurs</string>
     <string name="description_lower">Vous êtes %1$s%% moins émetteur de CO2e que la moyenne des utilisateurs</string>
     <string name="logout">Déconnexion</string>
+    <string name="HeaderTestName">Mon Empreinte Carbone</string>
+    <string name="TextGlobalWarming">Notre Planète se réchauffe, dû à l\'émission de gaz à effet de serre par l\'homme. C\'est un phénomène qui a commencé il y a plus de 100 ans et qui s\'accélère. Les scientifiques sont unanimes : il faut agir maintenant pour limiter le réchauffement climatique et ses conséquences.</string>
+    <string name="TextPurposeTest">Ce test vous donne très rapidement une mesure de votre empreinte carbone. Il vous permet de connaître votre impact sur le climat et de vous comparer à la moyenne des Français.</string>
+    <string name="ImageGWDesc">Une Image de la Terre avec un thermomètre à ses côtés, représentant le réchauffement climatique.</string>
+    <string name="HeaderStartTest">C\'est parti ?</string>
+    <string name="TextStartTest">Ceci est un test individuel.   Répondez pour vous et votre vie perso, pas pour votre travail ou vos études.   Cependant pensez à compter votre trajet domicile-travail.</string>
+    <string name="scores_history">Historique des scores</string>
+    <string name="previous">Précédent</string>
+    <string name="next">Suivant</string>
+    <string name="skip">Passer</string>
+    <string name="start">Commencer</string>
 </resources>

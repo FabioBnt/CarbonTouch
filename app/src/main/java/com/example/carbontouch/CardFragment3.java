@@ -27,4 +27,9 @@ public class CardFragment3 extends CardFragment {
     public String getAnswer4() {
         return "10 or more";
     }
+
+    @Override
+    public int getImageView() {
+        return R.drawable.devices;
+    }
 }
