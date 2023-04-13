@@ -37,4 +37,6 @@
     <string name="next">Next</string>
     <string name="skip">Skip</string>
     <string name="start">Start</string>
+    <string name="question_1">What is your preferred mode of transportation?</string>
+    <string name="question_2">How many people live in your household ?</string>
 </resources>

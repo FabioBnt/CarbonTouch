@@ -37,4 +37,6 @@
     <string name="next">Suivant</string>
     <string name="skip">Passer</string>
     <string name="start">Commencer</string>
+    <string name="question_1">Quel est votre mode de déplacement quotidien ?</string>
+    <string name="question_2">Combien de personnes vivent sous le même toit que vous?</string>
 </resources>

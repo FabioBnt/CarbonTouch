@@ -7,9 +7,10 @@ public class CardFragment1 extends CardFragment {
     }
     @Override
     public String getQuestion() {
-        return "What is your preferred mode of transportation?";
+        return getResources().getString(R.string.question_1);
     }
 
+    //TODO : externalize strings
     @Override
     public String getAnswer1() {
         return "Walking/biking";

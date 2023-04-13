@@ -21,8 +21,10 @@ public class CardFragment2 extends CardFragment {
 
     @Override
     public String getQuestion() {
-        return "How many people live in your household?";
+        return getResources().getString(R.string.question_2);
     }
+
+    //TODO : externalize strings
 
     @Override
     public String getAnswer1() {

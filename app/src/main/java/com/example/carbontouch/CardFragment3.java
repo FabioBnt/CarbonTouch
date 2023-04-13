@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 public class CardFragment3 extends CardFragment {
 
+    //TODO : externalize strings
+
     public CardFragment3() {
         // Required empty public constructor
     }
