@@ -13,22 +13,22 @@ public class CardFragment1 extends CardFragment {
     //TODO : externalize strings
     @Override
     public String getAnswer1() {
-        return "Walking/biking";
+        return getResources().getString(R.string.a1_q1);
     }
 
     @Override
     public String getAnswer2() {
-        return "Public transportation";
+        return getResources().getString(R.string.a2_q1);
     }
 
     @Override
     public String getAnswer3() {
-        return "Electric car";
+        return getResources().getString(R.string.a3_q1);
     }
 
     @Override
     public String getAnswer4() {
-        return "Gas car";
+        return getResources().getString(R.string.a4_q1);
     }
 
     @Override

@@ -39,4 +39,11 @@
     <string name="start">Start</string>
     <string name="question_1">What is your preferred mode of transportation?</string>
     <string name="question_2">How many people live in your household ?</string>
+    <string name="a1_q1">Walking/Biking</string>
+    <string name="a2_q1">Public Transportation</string>
+    <string name="a3_q1">Electric Car</string>
+    <string name="a4_q1">Gas Car</string>
+    <string name="question_3">How many electronic devices do you have in your home?</string>
+    <string name="a4_q2">4 or more</string>
+    <string name="a4_q3">10 or more</string>
 </resources>

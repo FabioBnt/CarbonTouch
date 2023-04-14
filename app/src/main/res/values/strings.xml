@@ -39,4 +39,17 @@
     <string name="start">Commencer</string>
     <string name="question_1">Quel est votre mode de déplacement quotidien ?</string>
     <string name="question_2">Combien de personnes vivent sous le même toit que vous?</string>
+    <string name="a1_q1">Marche/Vélo</string>
+    <string name="a2_q1">Transports en commun</string>
+    <string name="a3_q1">Voiture Électrique</string>
+    <string name="a4_q1">Voiture à essence</string>
+    <string name="question_3">Combien d\'appareils électroniques possédez vous chez vous ?</string>
+    <string name="a1_q2" translatable="false">1</string>
+    <string name="a2_q2" translatable="false">2</string>
+    <string name="a3_q2" translatable="false">3</string>
+    <string name="a4_q2">4 ou plus</string>
+    <string name="a1_q3" translatable="false">1-3</string>
+    <string name="a2_q3" translatable="false">4-6</string>
+    <string name="a3_q3" translatable="false">7-9</string>
+    <string name="a4_q3">10 ou plus</string>
 </resources>

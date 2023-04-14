@@ -1,33 +1,30 @@
 package com.example.carbontouch;
 
-import android.os.Bundle;
-
 public class CardFragment3 extends CardFragment {
 
-    //TODO : externalize strings
 
     public CardFragment3() {
         // Required empty public constructor
     }
 
     public String getQuestion() {
-        return "How many personal devices do you have in your household?";
+        return getResources().getString(R.string.question_3);
     }
 
     public String getAnswer1() {
-        return "1-3";
+        return getResources().getString(R.string.a1_q3);
     }
 
     public String getAnswer2() {
-        return "4-6";
+        return getResources().getString(R.string.a2_q3);
     }
 
     public String getAnswer3() {
-        return "7-9";
+        return getResources().getString(R.string.a3_q3);
     }
 
     public String getAnswer4() {
-        return "10 or more";
+        return getResources().getString(R.string.a4_q3);
     }
 
     @Override

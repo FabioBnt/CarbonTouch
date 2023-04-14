@@ -24,26 +24,24 @@ public class CardFragment2 extends CardFragment {
         return getResources().getString(R.string.question_2);
     }
 
-    //TODO : externalize strings
-
     @Override
     public String getAnswer1() {
-        return "1";
+        return getResources().getString(R.string.a1_q2);
     }
 
     @Override
     public String getAnswer2() {
-        return "2";
+        return getResources().getString(R.string.a2_q2);
     }
 
     @Override
     public String getAnswer3() {
-        return "3";
+        return getResources().getString(R.string.a3_q2);
     }
 
     @Override
     public String getAnswer4() {
-        return "4 or more";
+        return getResources().getString(R.string.a4_q2);
     }
 
     @Override
